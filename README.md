@@ -9,7 +9,7 @@ Unbuntu + NDKr13b
 2. add libx264 library (option)
 3. modify configure file like following code<br>
     [before]<br>
-    SLIBNAME_WITH_MAJOR='$(SLIBNAME).$(LIBMAJOR)'><br>
+    SLIBNAME_WITH_MAJOR='$(SLIBNAME).$(LIBMAJOR)'<br>
     LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'<br>
     SLIB_INSTALL_NAME='$(SLIBNAME_WITH_VERSION)'<br>
     SLIB_INSTALL_LINKS='$(SLIBNAME_WITH_MAJOR) $(SLIBNAME)'<br>
