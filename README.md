@@ -9,8 +9,6 @@ Unbuntu + NDKr13b
 2. add libx264 library (option)
 3. modify configure file like following define
 “`
-var i = 0;
-“`
   [before]
   SLIBNAME_WITH_MAJOR='$(SLIBNAME).$(LIBMAJOR)'
   LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'
@@ -21,9 +19,7 @@ var i = 0;
   LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'
   SLIB_INSTALL_NAME='$(SLIBNAME_WITH_MAJOR)'
   SLIB_INSTALL_LINKS='$(SLIBNAME)'
+“`  
 4. chmod +x build_ffmpeg_android.sh
 5. run build_ffmpeg_android.sh
 6. check ffmpeg-3.2.4/android/arm
-“`
-var i = 0;
-“`
