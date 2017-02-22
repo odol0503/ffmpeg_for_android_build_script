@@ -8,16 +8,16 @@ Unbuntu + NDKr13b
 1. add ffmpeg sources
 2. add libx264 library (option)
 3. modify configure file like following code<br>
-  >[before]<br>
-  >SLIBNAME_WITH_MAJOR='$(SLIBNAME).$(LIBMAJOR)'<br>
-  >LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'<br>
-  >SLIB_INSTALL_NAME='$(SLIBNAME_WITH_VERSION)'<br>
-  >SLIB_INSTALL_LINKS='$(SLIBNAME_WITH_MAJOR) $(SLIBNAME)'<br>
-  >[after]<br>
-  >SLIBNAME_WITH_MAJOR='$(SLIBPREF)$(FULLNAME)-$(LIBMAJOR)$(SLIBSUF)'<br>
-  >LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'<br>
-  >SLIB_INSTALL_NAME='$(SLIBNAME_WITH_MAJOR)'<br>
-  >SLIB_INSTALL_LINKS='$(SLIBNAME)'<br>
+    [before]
+    SLIBNAME_WITH_MAJOR='$(SLIBNAME).$(LIBMAJOR)'>
+    LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'
+    SLIB_INSTALL_NAME='$(SLIBNAME_WITH_VERSION)'
+    SLIB_INSTALL_LINKS='$(SLIBNAME_WITH_MAJOR) $(SLIBNAME)'
+    [after]
+    SLIBNAME_WITH_MAJOR='$(SLIBPREF)$(FULLNAME)-$(LIBMAJOR)$(SLIBSUF)'
+    LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'
+    SLIB_INSTALL_NAME='$(SLIBNAME_WITH_MAJOR)'
+    SLIB_INSTALL_LINKS='$(SLIBNAME)'
 4. chmod +x build_ffmpeg_android.sh
 5. run build_ffmpeg_android.sh
 6. check ffmpeg-3.2.4/android/arm
