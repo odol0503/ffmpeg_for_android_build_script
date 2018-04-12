@@ -1,3 +1,10 @@
+#!/bin/bash
+NDK=/home/shoh/android-ndk-r13b
+SYSROOT=$NDK/platforms/android-21/arch-arm64/
+TOOLCHAIN=$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64
+CPU=arm64
+PREFIX=$(pwd)/android/$CPU
+
 function build_one
 {
 	./configure \
